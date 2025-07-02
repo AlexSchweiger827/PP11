@@ -143,8 +143,8 @@ The memory can be scattered across the heap, which cause small unusable fragment
 #include <stdio.h>
 
 typedef struct DNode {
-    void *data;           // Pointer to the actual data
-    char name [100]       // character array for name 
+    int number;           //Integer number new data field
+    char name [100];       // character array for name  new data field
     struct DNode *prev;   // Pointer to the previous node in the list
     struct DNode *next;   // Pointer to the next node in the list
 } DNode;
@@ -162,7 +162,7 @@ typedef struct DList {
 
 ```c
 #include <stdio.h>
-#include "dlist.h"  // defines DNode and DList
+#include "dlist2.h"  // defines DNode and DList
 
 // Static nodes for values 1–5
 DNode nodes[5];
@@ -171,9 +171,9 @@ DList list;
 int main(void) {
     // Initialize static nodes
     for (int i = 0; i < 5; i++) {
-        // Example: store node index as data
-        nodes[i].data = (void*)(long)(i + 1);
-        nodes.[i].name
+        nodes[i].number = i + 1;                  //Assigning a number
+        sprintf (nodes[i].name, "Name %d", i+1); //Assigning a name
+
         nodes[i].prev = (i > 0) ? &nodes[i - 1] : NULL;
         nodes[i].next = (i < 4) ? &nodes[i + 1] : NULL;
     }
@@ -181,16 +181,20 @@ int main(void) {
     list.tail = &nodes[4];
 
     // Traverse forward
-    printf("Forward: ");
+    printf("Forward:\n ");
+    printf("Number\n\tName\n");
+    printf("------\t--------\n");
     for (DNode *p = list.head; p != NULL; p = p->next) {
-        printf("%ld ", (long)p->data);
+         printf("%d\t%-15s\t ",p->number, p->name);
     }
     printf("\n");
 
     // Traverse backward
-    printf("Backward: ");
+    printf("Backward:\n ");
+    printf("Number\n\tName\n");
+    printf("------\t--------\n");
     for (DNode *p = list.tail; p != NULL; p = p->prev) {
-        printf("%ld ", (long)p->data);
+        printf("%d\t%-15s\t ",p->number, p->name);
     }
     printf("\n");
 
@@ -198,6 +202,8 @@ int main(void) {
 }
 ```
 ---
+The Program compiled und testet looks like this: 
+
 
 ### Task 2: Interactive Singly Linked List
 
