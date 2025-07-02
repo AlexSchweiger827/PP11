@@ -87,7 +87,7 @@ In this exercise you will:
    gcc -o solutions/dlist_static solutions/dlist_static.c
    ./solutions/dlist_static
    ```
-**Link of **Link of dlist.h**
+**Link of dlist.h**
 
 [dlist.h](https://github.com/AlexSchweiger827/PP11/blob/master/PP11/solutions/dlist.h)
    
