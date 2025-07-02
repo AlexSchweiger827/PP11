@@ -268,8 +268,15 @@ The Program compiled und testet looks like this:
 #### Reflection Questions
 
 1. **Why is `malloc` necessary when adding nodes dynamically?**
-2. **How can you traverse the list to print each node’s address and value?**
-3. **What are the consequences of not freeing the list before exit?**
+
+"malloc" is responsible for allocating memory on the heap at runtime.
+It provides the needed memory at runtime to data that are varying.
+"malloc" returns a pointer to the new allocated memory block, which creates a link between independent memory blocks.
+
+3. **How can you traverse the list to print each node’s address and value?**
+
+ 
+5. **What are the consequences of not freeing the list before exit?**
 
 ---
 
