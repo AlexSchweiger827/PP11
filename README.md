@@ -91,8 +91,108 @@ In this exercise you will:
 #### Reflection Questions
 
 1. **How do you link `prev` and `next` pointers correctly using a static array?**
+
+By declaring a static array (e.g DNode nodes[5] ), the compiler assign a block of memory to hold 5 Dnode structures.
+Each elment in the array ( nodes[i])  has a unique memory adress. 
+By using the adress- of operator (&) you can get the address of an array element and assign it to a pointer. 
+
+
+
+   
 2. **What are advantages and limitations of compile-time vs. dynamic allocation?**
+   
+
+**compile-time allocation**
+
+advantages:
+The compile-time allocation is very fast. Global and static are distributed when the program loads.
+Furthermore stack variables are alloctated by adjusting the stack pointer.
+The runtime does not extra time to search for free memory blocks. 
+The data is located in expected memory regions, which lead to better cache performance.
+The memory is managaed by the stack, which eliminates small, unusable fragments in the heap. 
+
+limitations:
+It is not suitable for data structures which varies (e.g array sizes that are determined at runtime).
+Because the amount of memory is decided at compile time.
+Local variables on the stack are destroyed when the function returns.
+Recursive functions or functions with large local arrays can exhaust the limited stack space (stack overflow).
+It can not manage complex data structures (e.g trees, graphs) where the nodes often are added or removed.
+
+**dynamic allocation**
+
+advantages:
+The right amount of memory will be allocated in runtime. Which is suitable for data structures that varies.
+Dynamic allocation can manage structures like trees and graphs where the nodes often are added or removed. 
+Memory is only allocated when needed and disposed when it is not used anymore.
+
+limitations:
+The Allocation needs more time to search for free memory blocks.
+The memory can be scattered across the heap, which cause small unusable fragments in the heap. The consequence is bad cache performance.
+
+   
 3. **How would you extend this static list to include additional data fields?**
+   
+1. Change the DNode structure in dlist.h (e.g add char name)
+   ```c
+#ifndef DLIST_H
+#define DLIST_H
+
+#include <stddef.h>
+#include <stdio.h>
+
+typedef struct DNode {
+    void *data;           // Pointer to the actual data
+    char name [100]       // character array for name 
+    struct DNode *prev;   // Pointer to the previous node in the list
+    struct DNode *next;   // Pointer to the next node in the list
+} DNode;
+
+typedef struct DList {
+    DNode *head;
+    DNode *tail;
+    size_t size;
+} DList;
+
+#endif
+```
+2.Add the main Programm (dlist_static.c) by adding the new data fields.
+
+```c
+#include <stdio.h>
+#include "dlist.h"  // defines DNode and DList
+
+// Static nodes for values 1–5
+DNode nodes[5];
+DList list;
+
+int main(void) {
+    // Initialize static nodes
+    for (int i = 0; i < 5; i++) {
+        // Example: store node index as data
+        nodes[i].data = (void*)(long)(i + 1);
+        nodes.[i].name
+        nodes[i].prev = (i > 0) ? &nodes[i - 1] : NULL;
+        nodes[i].next = (i < 4) ? &nodes[i + 1] : NULL;
+    }
+    list.head = &nodes[0];
+    list.tail = &nodes[4];
+
+    // Traverse forward
+    printf("Forward: ");
+    for (DNode *p = list.head; p != NULL; p = p->next) {
+        printf("%ld ", (long)p->data);
+    }
+    printf("\n");
+
+    // Traverse backward
+    printf("Backward: ");
+    for (DNode *p = list.tail; p != NULL; p = p->prev) {
+        printf("%ld ", (long)p->data);
+    }
+    printf("\n");
+
+    return 0;
+}
 
 ---
 
