@@ -87,6 +87,17 @@ In this exercise you will:
    gcc -o solutions/dlist_static solutions/dlist_static.c
    ./solutions/dlist_static
    ```
+**Link of **Link of dlist.h**
+
+[dlist.h](https://github.com/AlexSchweiger827/PP11/blob/master/PP11/solutions/dlist.h)
+   
+**Link of dlist_static.c**
+
+[dlist_static.c](https://github.com/AlexSchweiger827/PP11/blob/master/PP11/solutions/dlist_static.c)
+   
+**dlist_static.c compiled and Test run of dlist_static**
+
+![dlist_static.c compiled](https://github.com/AlexSchweiger827/PP11/blob/master/PP11%20screenshots/Task1_3.PNG) 
 
 #### Reflection Questions
 
@@ -204,6 +215,7 @@ int main(void) {
 ---
 The Program compiled und testet looks like this: 
 
+![dlist_static2.c compiled](https://github.com/AlexSchweiger827/PP11/blob/master/PP11%20screenshots/Task1_3.PNG) 
 
 ### Task 2: Interactive Singly Linked List
 
@@ -264,6 +276,18 @@ The Program compiled und testet looks like this:
    gcc -o solutions/slist_main solutions/slist_main.c solutions/slist.o
    ./solutions/slist_main
    ```
+**Link to slist.h**
+[slist.h](https://github.com/AlexSchweiger827/PP11/blob/master/PP11/solutions/slist.h)
+
+**Link to slist.c**
+[slist.c](https://github.com/AlexSchweiger827/PP11/blob/master/PP11/solutions/slist.c)
+
+**Link to slist_main.c**
+[slist_main.c](https://github.com/AlexSchweiger827/PP11/blob/master/PP11/solutions/slist_main.c)
+
+**slist_main.c compiled and test run of slist_main**
+
+![slist_main.c compiled](https://github.com/AlexSchweiger827/PP11/blob/master/PP11%20screenshots/Task%202.PNG?raw=true) 
 
 #### Reflection Questions
 
