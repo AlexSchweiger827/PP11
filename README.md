@@ -105,9 +105,19 @@ In this exercise you will:
 
 By declaring a static array (e.g DNode nodes[5] ), the compiler assign a block of memory to hold 5 Dnode structures.
 Each elment in the array ( nodes[i])  has a unique memory adress. 
-By using the adress- of operator (&) you can get the address of an array element and assign it to a pointer. 
+every nodes[i] is allocated at a known memory adress. 
+By using the adress- of operator (&) you can get the address of an array element and assign it to a pointer field ("prev", "next").
+```c
+nodes[i].prev = (i > 0) ? &nodes[i - 1] : NULL;
+nodes[i].next = (i < 4) ? &nodes[i + 1] : NULL;
+```
 
+Creating a "head" and "tail" helps to define where the start and where the end of the list is.
 
+```c
+ list.head = &nodes[0];
+ list.tail = &nodes[4];
+```
 
    
 2. **What are advantages and limitations of compile-time vs. dynamic allocation?**
@@ -300,10 +310,10 @@ The Program compiled und testet looks like this:
 It provides the needed memory at runtime to data that are varying.
 "malloc" returns a pointer to the new allocated memory block, which creates a link between independent memory blocks.
 
-3. **How can you traverse the list to print each node’s address and value?**
+2. **How can you traverse the list to print each node’s address and value?**
 
  
-5. **What are the consequences of not freeing the list before exit?**
+3. **What are the consequences of not freeing the list before exit?**
 
 ---
 
