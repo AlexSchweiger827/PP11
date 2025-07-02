@@ -133,7 +133,9 @@ The memory can be scattered across the heap, which cause small unusable fragment
 3. **How would you extend this static list to include additional data fields?**
    
 1. Change the DNode structure in dlist.h (e.g add char name)
-   ```c
+
+   
+```c
 #ifndef DLIST_H
 #define DLIST_H
 
@@ -155,6 +157,7 @@ typedef struct DList {
 
 #endif
 ```
+
 2.Add the main Programm (dlist_static.c) by adding the new data fields.
 
 ```c
@@ -193,7 +196,7 @@ int main(void) {
 
     return 0;
 }
-
+```
 ---
 
 ### Task 2: Interactive Singly Linked List
