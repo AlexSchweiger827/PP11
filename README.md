@@ -97,7 +97,7 @@ In this exercise you will:
    
 **dlist_static.c compiled and Test run of dlist_static**
 
-![dlist_static.c compiled](https://github.com/AlexSchweiger827/PP11/blob/master/PP11%20screenshots/Task1_3.PNG) 
+![dlist_static.c compiled](https://github.com/AlexSchweiger827/PP11/blob/master/PP11%20screenshots/Task%201.PNG?raw=true) 
 
 #### Reflection Questions
 
