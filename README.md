@@ -277,12 +277,15 @@ The Program compiled und testet looks like this:
    ./solutions/slist_main
    ```
 **Link to slist.h**
+
 [slist.h](https://github.com/AlexSchweiger827/PP11/blob/master/PP11/solutions/slist.h)
 
 **Link to slist.c**
+
 [slist.c](https://github.com/AlexSchweiger827/PP11/blob/master/PP11/solutions/slist.c)
 
 **Link to slist_main.c**
+
 [slist_main.c](https://github.com/AlexSchweiger827/PP11/blob/master/PP11/solutions/slist_main.c)
 
 **slist_main.c compiled and test run of slist_main**
