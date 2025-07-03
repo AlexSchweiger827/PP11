@@ -407,3 +407,4 @@ gcc -o solutions/json_main solutions/json_main.c solutions/json_list.o -ljansson
 ---
 
 **Remember:** Stop after **90 minutes** and record where you stopped.
+I finished task 1-2. It took me a lot more than 90 minutes because I had problems to program slist.c. I tried to make at least 50% of PP11.
