@@ -314,6 +314,10 @@ It provides the needed memory at runtime to data that are varying.
 
  
 3. **What are the consequences of not freeing the list before exit?**
+If the list not get freed, the blocks of memory are still reserved for the program. Even after the nodes are not used anymore.
+The use of memory will grow. The Peformance decrease and the program or other programs crash.
+
+After the program exits, the operating system cleans up the used memory.
 
 ---
 
