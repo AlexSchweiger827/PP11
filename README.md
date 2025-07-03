@@ -301,6 +301,7 @@ The Program compiled und testet looks like this:
 **slist_main.c compiled and test run of slist_main**
 
 ![slist_main.c compiled](https://github.com/AlexSchweiger827/PP11/blob/master/PP11%20screenshots/Task%202.PNG?raw=true) 
+![slist_main.c compiled](https://github.com/AlexSchweiger827/PP11/blob/master/PP11%20screenshots/Task%202_1.PNG?raw=true) 
 
 #### Reflection Questions
 
